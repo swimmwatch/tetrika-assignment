@@ -303,6 +303,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "types-beautifulsoup4"
+version = "4.11.2"
+description = "Typing stubs for beautifulsoup4"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "typing-extensions"
 version = "4.3.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
@@ -313,7 +321,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "09d959f2322d8567f9d6d7cb9a7a669b88359179cbe162e771708312cb0a6de7"
+content-hash = "90eae35c496aaf7cfa83f9609d7e5bb691e3a9a2db729212c0371450964604c8"
 
 [metadata.files]
 aiostream = [
@@ -443,6 +451,10 @@ soupsieve = [
 tomli = [
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
     {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
+]
+types-beautifulsoup4 = [
+    {file = "types-beautifulsoup4-4.11.2.tar.gz", hash = "sha256:7c45224fd47d39d822efc72838f58e43d2da7fa744107e772ecf779ff6190f2d"},
+    {file = "types_beautifulsoup4-4.11.2-py3-none-any.whl", hash = "sha256:2838757b9f321ad7b781c336c1779a1c5b2f1966b83d125b872102be940a5a0f"},
 ]
 typing-extensions = [
     {file = "typing_extensions-4.3.0-py3-none-any.whl", hash = "sha256:25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02"},
