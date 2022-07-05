@@ -10,7 +10,7 @@ def task(array: str) -> int:
     :return: Index
     """
     try:
-        res = array.index('0') - 1
+        res = array.index('0')
     except ValueError:
         raise ValueError('0 not found')
     return res
