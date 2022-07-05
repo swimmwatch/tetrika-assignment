@@ -1,11 +1,11 @@
 """
 Unittests for algorithms utils.
 """
-from typing import TypeVar, Iterable, Optional, Callable
+from typing import TypeVar, Iterable, Optional, Callable, List, Tuple
 
 import pytest
 
-from utils.algorithms import find_first
+from utils.algorithms import find_first, batch
 
 T = TypeVar('T')
 
@@ -27,4 +27,20 @@ def test_find_first(
         expected: Optional[T]
 ):
     actual = find_first(condition, collection)
+    assert actual == expected
+
+
+@pytest.mark.parametrize('data,n,expected', [
+    ([], 0, []),
+    ([], 1, []),
+    ([1], 1, [(1,)]),
+    ([1, 2], 1, [(1,), (2,)]),
+    ([1, 2, 3], 2, [(1, 2), (3, None)]),
+])
+def test_batch(
+        data: List[T],
+        n: int,
+        expected: List[Tuple[T]]
+):
+    actual = list(batch(data, n))
     assert actual == expected
