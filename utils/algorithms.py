@@ -25,7 +25,11 @@ def find_first(
         return None
 
 
-def batch(iterable: Iterable[T], n: int, fillvalue: Any = None) -> Iterable[Tuple[T]]:
+def batch(
+        iterable: Iterable[T],
+        n: int,
+        fillvalue: Any = None
+) -> Iterable[Tuple[T]]:
     """Collect data into fixed-length chunks or blocks"""
     iters = [iter(iterable)] * n
     return zip_longest(*iters, fillvalue=fillvalue)

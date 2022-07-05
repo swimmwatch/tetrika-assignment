@@ -5,7 +5,8 @@ from typing import Optional
 
 import pytest
 
-from task3.solution import StudySessionData, overlap_study, Interval, has_overlap, overlap
+from task3.solution import StudySessionData, overlap_study, \
+    Interval, has_overlap, overlap
 
 
 @pytest.mark.parametrize('i1,i2,expected', [

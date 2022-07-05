@@ -2,8 +2,6 @@
 Solution for task №3.
 """
 from dataclasses import dataclass
-from itertools import tee, combinations, product
-from pprint import pprint
 from typing import List, Optional
 
 
@@ -86,7 +84,9 @@ def overlap_study(data: StudySessionData) -> int:
         new_i = i
         for j in intersections:
             if has_overlap(new_i, j):
-                new_i = overlap(new_i, j)
+                over = overlap(new_i, j)
+                if over:
+                    new_i = over
         res.append(new_i)
 
     return sum(i.end - i.start for i in res)
