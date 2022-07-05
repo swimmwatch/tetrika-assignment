@@ -6,7 +6,10 @@ from typing import Callable, Iterable, TypeVar, Optional
 T = TypeVar('T')
 
 
-def find_first(condition: Callable[[T], bool], collection: Iterable[T]) -> Optional[T]:
+def find_first(
+        condition: Callable[[T], bool],
+        collection: Iterable[T]
+) -> Optional[T]:
     """
     Find first element by condition result.
 
